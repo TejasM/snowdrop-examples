@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+    <persistence-unit name="sportsclubPU" transaction-type="RESOURCE_LOCAL">
+
+        <class>org.jboss.snowdrop.samples.sportsclub.domain.entity.Account</class>
+        <class>org.jboss.snowdrop.samples.sportsclub.domain.entity.Equipment</class>
+        <class>org.jboss.snowdrop.samples.sportsclub.domain.entity.Invoice</class>
+        <class>org.jboss.snowdrop.samples.sportsclub.domain.entity.Balance</class>
+        <class>org.jboss.snowdrop.samples.sportsclub.domain.entity.Payment</class>
+        <class>org.jboss.snowdrop.samples.sportsclub.domain.entity.Membership</class>
+        <class>org.jboss.snowdrop.samples.sportsclub.domain.entity.Person</class>
+        <class>org.jboss.snowdrop.samples.sportsclub.domain.entity.Reservation</class>
+
+        <properties>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>

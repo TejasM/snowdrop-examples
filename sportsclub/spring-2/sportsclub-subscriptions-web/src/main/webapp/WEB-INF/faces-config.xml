@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee" version="2.0">
+    
+    <managed-bean>
+        <managed-bean-name>accountSearch</managed-bean-name>
+        <managed-bean-class>org.jboss.snowdrop.samples.sportsclub.jsf.beans.AccountSearch</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+    
+    <managed-bean>
+        <managed-bean-name>accountCreate</managed-bean-name>
+        <managed-bean-class>org.jboss.snowdrop.samples.sportsclub.jsf.beans.AccountCreate</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+        <managed-property>
+            <property-name>referenceDataHelper</property-name>
+            <value>#{referenceDataHelper}</value>
+        </managed-property>
+    </managed-bean>
+   
+    <managed-bean>
+        <managed-bean-name>referenceDataHelper</managed-bean-name>
+        <managed-bean-class>org.jboss.snowdrop.samples.sportsclub.jsf.beans.ReferenceDataHelper</managed-bean-class>
+        <managed-bean-scope>application</managed-bean-scope>
+    </managed-bean>
+    
+    <converter>
+        <converter-id>enumConverter</converter-id>
+        <converter-class>org.jboss.snowdrop.samples.sportsclub.jsf.beans.BillingTypeConverter</converter-class>
+    </converter>
+    
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+             <from-outcome>create</from-outcome>   
+            <to-view-id>/createForm.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+             <from-outcome>search</from-outcome>
+            <to-view-id>/searchForm.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/createForm.xhtml</from-view-id>
+        <navigation-case>
+             <from-action>#{accountCreate.create}</from-action>
+            <to-view-id>/createResult.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+</faces-config>
