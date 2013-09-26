@@ -415,6 +415,46 @@
 							<groupId>org.springframework</groupId>
 							<artifactId>spring-beans</artifactId>
 						</exclusion>
+                        <exclusion>
+                            <groupId>org.springframework.ws</groupId>
+                            <artifactId>spring-oxm</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>org.springframework</groupId>
+                            <artifactId>spring-aop</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>org.springframework</groupId>
+                            <artifactId>spring-asm</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>org.springframework</groupId>
+                            <artifactId>spring-expression</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>org.springframework</groupId>
+                            <artifactId>spring-beans</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>org.springframework</groupId>
+                            <artifactId>spring-core</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>org.springframework</groupId>
+                            <artifactId>spring-context</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>org.springframework</groupId>
+                            <artifactId>spring-context-support</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>commons-logging</groupId>
+                            <artifactId>commons-logging</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>aopalliance</groupId>
+                            <artifactId>aopalliance</artifactId>
+                        </exclusion>
 					</exclusions>
 				</dependency>
 			</dependencies>
